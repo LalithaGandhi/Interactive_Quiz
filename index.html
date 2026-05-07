@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-wrapper">
+        <h1 id="quiz-title">Web Development Challenge</h1>
+        
+        <div class="timer-bar">Time Left: <span id="timeLeft">15</span>s</div>
+        
+        <!-- SINGLE container for dynamic content -->
+        <div id="quiz-container">
+    
+            <img id="questionImage" src="" class="center" alt="Question Image">
+            <p class="question-text" id="questionText">Loading question...</p>
+            
+            <div class="options-grid" id="optionsGrid"></div>
+            
+            <!-- Feedback area for explanations -->
+            <div id="feedback-area" class="hidden" style="margin-top:10px; padding:15px; border-radius:5px; background:#e8f4fd; border-left: 5px solid #4a90e2;">
+                <strong>Explanation:</strong> <span id="explanationText"></span>
+            </div>
+        </div>
+
+        <div class="footer-controls">
+            <span id="progress">Question 1 of 5</span>
+            <button id="hintBtn" style="background:#f39c12; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Show Hint</button>
+            <button id="nextBtn" disabled>Next Question</button>
+        </div>
+
+        <!-- Hidden container for results -->
+        <div id="result-container" class="hidden">
+            <h2>Quiz Complete!</h2>
+            <p id="score-text"></p>
+            <button onclick="location.reload()" style="margin-top: 20px;">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

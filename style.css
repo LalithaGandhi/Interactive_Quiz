@@ -1,0 +1,93 @@
+:root {
+    --primary: #4a90e2;
+    --success: #2ecc71;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-wrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.center {
+    width:50%;
+    height:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Custom Radio Styling via Buttons */
+.option-label {
+    padding: 12px 15px;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+}
+
+.option-label:hover {
+    background: #f8f9fa;
+    border-color: var(--primary);
+}
+
+/* When the hidden radio is checked */
+input[type="radio"] { display: none; }
+
+input[type="radio"]:checked + .option-label {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.footer-controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.hidden { display: none; }
